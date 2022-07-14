@@ -17,7 +17,7 @@ export const createMovieCard = (imgUrl, title, rate, date) => {
                 <small class="text-muted">${date}</small>
               </p>
               <p class="card-text rounded-circle rating"><small>${
-                rate * 100
+                rate * 10
               }%</small></p>
             </div>
           </div>
