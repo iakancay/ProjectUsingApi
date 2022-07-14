@@ -1,7 +1,9 @@
 import { getMovies } from "../../routes/getMovies.js";
+import { initMovieList } from "../dashboard/movieList.js";
 
 const main = () => {
-  getMovies("top_rated", 2);
+  initMovieList();
+  //getMovies("top_rated", 2);
 };
 
 window.addEventListener("load", main);

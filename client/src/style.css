@@ -1,0 +1,36 @@
+body {
+  background-color: #4f4f4f;
+}
+.movie-card {
+  cursor: pointer;
+  min-height: 460px;
+}
+.movie-card:hover {
+  box-shadow: 0px 0px 20px #cce9ed;
+  transform: translate(-10px, -10px);
+  transition: 0.25s ease;
+}
+#dashboard {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.card-body {
+  position: relative;
+}
+.card img {
+  height: 60%;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  /* padding: 10px 5px; */
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  z-index: 2;
+  color: white;
+  background-color: black;
+}
