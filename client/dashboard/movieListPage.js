@@ -1,9 +1,9 @@
 import { getMovies } from "../../routes/getMovies.js";
-import { createMovieCard } from "../components/movieCard.js";
+import { createMovieCard } from "../components/movieCardView.js";
 
-export const initMovieList = async () => {
+export const showMovieList = async () => {
   const dashboard = document.querySelector("#dashboard");
-  dashboard.innerHTML = " ";
+
   const movieListElement = document.createElement("div");
   const moreMovieButton = document.createElement("button");
   moreMovieButton.classList.add("btn", "btn-outline-danger");
@@ -19,7 +19,7 @@ export const initMovieList = async () => {
     "row-cols-lg-5",
     "g-5"
   );
-  dashboard.appendChild(movieListElement);
+
   const navbarItems = document.querySelectorAll(".nav-item");
 
   navbarItems.forEach((item) => {
@@ -27,16 +27,11 @@ export const initMovieList = async () => {
       item.classList.remove("active");
       item.classList.add("active");
       currentType = item.id;
+      dashboard.innerHTML = " ";
+      dashboard.appendChild(movieListElement);
       movieListElement.innerHTML = " ";
       const movies = await getMovies(currentType, 1);
-      movies.forEach((movie) => {
-        createMovieCard(
-          movie.poster,
-          movie.title,
-          movie.rating,
-          movie.releaseDate
-        );
-      });
+      movies.forEach((movie) => createMovieCard(movie));
       dashboard.appendChild(moreMovieButton);
     });
   });
@@ -44,14 +39,7 @@ export const initMovieList = async () => {
     let page = 1;
     page++;
     const movies = await getMovies(currentType, page);
-    movies.forEach((movie) => {
-      createMovieCard(
-        movie.poster,
-        movie.title,
-        movie.rating,
-        movie.releaseDate
-      );
-    });
+    movies.forEach((movie) => createMovieCard(movie));
   });
   /*  const movies = await getMovies("top_rated", 2);
   movies.forEach((movie) => {
