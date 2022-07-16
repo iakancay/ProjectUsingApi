@@ -6,7 +6,7 @@ export const showMovieList = async () => {
 
   const movieListElement = document.createElement("div");
   const moreMovieButton = document.createElement("button");
-  moreMovieButton.classList.add("btn", "btn-outline-danger");
+  moreMovieButton.classList.add("btn", "btn-outline-danger", "float-end");
   moreMovieButton.id = "more-movie";
   moreMovieButton.innerText = "More";
   let currentType;

@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL, GENRES } from "../client/src/constants.js";
+import { API_KEY, BASE_URL } from "../client/src/constants.js";
 import { getBackdropPath, getImagePath } from "./getMovies.js";
 
 export const getSimilarMovies = async (movieId) => {

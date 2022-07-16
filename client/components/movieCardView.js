@@ -7,14 +7,14 @@ export const createMovieCard = (movie) => {
   movieListElement.appendChild(card);
   card.innerHTML = `
   
-          <div class="card movie-card">
+          <div class="card movie-card overflow-hidden">
             <img
               src="${movie.poster}"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title text-danger">${movie.title}</h5>
+              <h5 class="card-title text-dark">${movie.title}</h5>
               <p class="card-text">
                 <small class="text-muted">${movie.releaseDate}</small>
               </p>

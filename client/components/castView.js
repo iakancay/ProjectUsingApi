@@ -4,7 +4,7 @@ export const createCastCard = (cast) => {
   element.classList.add("cast-card");
   castList.appendChild(element);
   element.innerHTML = `
-  <div class="card" style="width: 9rem;">
+  <div class="card" >
   <img src=${cast.poster} class="card-img-top" alt="...">
   <div class="card-body">
   <p class="cast-name">${cast.name}</p>
@@ -12,8 +12,6 @@ export const createCastCard = (cast) => {
     
   </div>
 </div>
-
-
 `;
   return element;
 };
