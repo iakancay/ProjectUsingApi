@@ -1,4 +1,4 @@
-import { getCast, getMovieDetail } from "../../routes/getDetails.js";
+import { getCast, getMovieDetail } from "../../api/getDetails.js";
 import { createCastCard } from "../components/castView.js";
 import { createDetailElement } from "../components/detailsView.js";
 import { createSimilarElement } from "../components/similarView.js";

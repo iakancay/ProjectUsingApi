@@ -1,4 +1,4 @@
-import { getSimilarMovies } from "../../routes/getSimilarMovies.js";
+import { getSimilarMovies } from "../../api/getSimilarMovies.js";
 import { createMovieCard } from "./movieCardView.js";
 
 export const createSimilarElement = async (movieId) => {

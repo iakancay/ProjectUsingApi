@@ -1,4 +1,4 @@
-import { getBackdropPath, getImagePath } from "../../routes/getMovies.js";
+import { getBackdropPath, getImagePath } from "../../api/getMovies.js";
 
 export const createDetailElement = (movie) => {
   const movieDetails = document.createElement("div");
@@ -13,6 +13,7 @@ export const createDetailElement = (movie) => {
   movieDetails.innerHTML = `
 <div class="poster">
             <img src=${getImagePath(movie.poster_path)} alt="" />
+            
           </div>
           <div class="detail-info">
             <h2 class="title">
@@ -22,6 +23,7 @@ export const createDetailElement = (movie) => {
             <p class="description">
               ${movie.overview}
             </p>
+            <i class="bi bi-play-circle">Watch Trailer</i>
             <div class="cast">
               <h3 class="cast-head">Cast</h3>
               <div class="cast-list">
