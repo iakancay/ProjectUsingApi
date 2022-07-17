@@ -12,11 +12,12 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/875de42afd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--  NAVBAR -->
-    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+    <nav class="navbar sticky-top navbar-expand-sm bg-light">
       <div class="container-xl">
         <a class="navbar-brand" href="#">
           <img
@@ -28,7 +29,10 @@
           />
           CINEWORLD
         </a>
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
           <ul class="navbar-nav nav-tabs me-auto mb-2 mb-lg-0">
             <li id="top_rated" class="nav-item">
               <a class="nav-link" href="#">Top Rated</a>
@@ -56,7 +60,7 @@
       </div>
     </nav>
 
-    <!-- <iframe src="https://www.youtube.com/embed/vYsQ5mu5Xow"></iframe> -->
+    <!--  -->
     <div id="dashboard" class="container-lg overflow-hidden">
      
 

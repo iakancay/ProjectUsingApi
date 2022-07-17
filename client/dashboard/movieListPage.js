@@ -37,8 +37,8 @@ export const showMovieList = async () => {
       dashboard.appendChild(moreMovieButton);
     });
   });
+  let page = 1;
   moreMovieButton.addEventListener("click", async () => {
-    let page = 1;
     page++;
     const movies = await getMovies(currentType, page);
     movies.forEach((movie) => createMovieCard(movie));

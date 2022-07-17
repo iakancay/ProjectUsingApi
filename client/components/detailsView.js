@@ -13,6 +13,7 @@ export const createDetailElement = (movie) => {
   movieDetails.innerHTML = `
 <div class="poster">
             <img src=${getImagePath(movie.poster_path)} alt="" />
+            <a data-bs-toggle="modal" data-bs-target="#trailer"><i class="fa-solid fa-circle-play fa-6x fa-bounce"></i></a> 
             
           </div>
           <div class="detail-info">
@@ -23,7 +24,8 @@ export const createDetailElement = (movie) => {
             <p class="description">
               ${movie.overview}
             </p>
-            <i class="bi bi-play-circle">Watch Trailer</i>
+
+            
             <div class="cast">
               <h3 class="cast-head">Cast</h3>
               <div class="cast-list">

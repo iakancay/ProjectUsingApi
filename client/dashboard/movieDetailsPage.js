@@ -1,7 +1,8 @@
-import { getCast, getMovieDetail } from "../../api/getDetails.js";
+import { getCast, getMovieDetail, getVideoUrl } from "../../api/getDetails.js";
 import { createCastCard } from "../components/castView.js";
 import { createDetailElement } from "../components/detailsView.js";
 import { createSimilarElement } from "../components/similarView.js";
+import { createTrailerModal } from "../components/trailerModalView.js";
 
 export const showMovieDetail = async (movieId) => {
   const dashboard = document.querySelector("#dashboard");
@@ -15,4 +16,17 @@ export const showMovieDetail = async (movieId) => {
   const casts = await getCast(movieId);
   casts.forEach((cast) => createCastCard(cast));
   createSimilarElement(movieId);
+
+  const url = await getVideoUrl(movieId);
+  await createTrailerModal(movieId);
+  const modal = document.querySelector("#trailer");
+
+  modal.addEventListener("show.bs.modal", () => {
+    const frame = document.querySelector("#youtube-video");
+    frame.setAttribute("src", url);
+  });
+  modal.addEventListener("hide.bs.modal", () => {
+    const frame = document.querySelector("#youtube-video");
+    frame.setAttribute("src", " ");
+  });
 };

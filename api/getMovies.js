@@ -4,6 +4,7 @@ export const getImagePath = (path) => `https://image.tmdb.org/t/p/w500${path}`;
 
 export const getBackdropPath = (path) =>
   `https://image.tmdb.org/t/p/w500${path}`;
+export const getVideoPath = (id) => `https://www.youtube.com/embed/${id}`;
 
 export const getMovies = async (type, page) => {
   const api = `${BASE_URL}movie/${type}?api_key=${API_KEY}&language=en-US&page=${page}`;

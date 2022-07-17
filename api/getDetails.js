@@ -1,5 +1,5 @@
 import { API_KEY, BASE_URL } from "../client/src/constants.js";
-import { getImagePath } from "./getMovies.js";
+import { getImagePath, getVideoPath } from "./getMovies.js";
 
 export const getMovieDetail = async (movieId) => {
   const api = `${BASE_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;
@@ -27,6 +27,17 @@ export const getCast = async (movieId) => {
     }));
 
     return result.slice(0, 5);
+  }
+  throw new Error("Response failed!");
+};
+export const getVideoUrl = async (movieId) => {
+  const api = `${BASE_URL}movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`;
+  const response = await fetch(api);
+  if (response.ok) {
+    const { results } = await response.json();
+    const id = results[0].key;
+    const videoUrl = getVideoPath(id);
+    return videoUrl;
   }
   throw new Error("Response failed!");
 };
