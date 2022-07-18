@@ -1,15 +1,15 @@
-import { getBackdropPath, getImagePath } from "../../api/getMovies.js";
+import { getImagePath } from "../../api/getMovies.js";
 
 export const createDetailElement = (movie) => {
   const movieDetails = document.createElement("div");
   const styleElement = document.createElement("style");
   document.head.appendChild(styleElement);
-  styleElement.innerHTML = `.movie-details::before {background: url(${getBackdropPath(
+  styleElement.innerHTML = `.movie-details::before {background: url(${getImagePath(
     movie.backdrop_path
   )});background-size: cover}`;
   movieDetails.classList.add("movie-details");
   const genres = movie.genres.map((genre) => genre.name);
-  console.log(genres);
+
   movieDetails.innerHTML = `
 <div class="poster">
             <img src=${getImagePath(movie.poster_path)} alt="" />
@@ -20,7 +20,7 @@ export const createDetailElement = (movie) => {
             <h2 class="title">
             ${movie.title} (${movie.release_date.slice(0, 4)})
             </h2>
-            <h5 class="genres">${genres.join("-")}</h5>
+            <h4 class="genres">${genres.join("-")}</h4>
             <p class="description">
               ${movie.overview}
             </p>

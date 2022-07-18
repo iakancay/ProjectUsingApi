@@ -1,10 +1,7 @@
-import { getVideoUrl } from "../../api/getDetails.js";
-
-export const createTrailerModal = async (movieId) => {
+export const createTrailerModal = (url) => {
   const movieDetail = document.querySelector(".movie-details");
   const trailerElement = document.createElement("div");
   trailerElement.classList.add("trailer-container");
-  const url = await getVideoUrl(movieId);
   trailerElement.innerHTML = `
     <div class="modal fade" id="trailer" tabindex="-1" aria-labelledby="trailerLabel" aria-hidden="true">
     <div class="modal-dialog">
