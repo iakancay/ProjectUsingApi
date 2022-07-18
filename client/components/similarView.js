@@ -1,8 +1,6 @@
-import { getSimilarMovies } from "../../routes/getSimilarMovies.js";
 import { createMovieCard } from "./movieCardView.js";
 
-export const createSimilarElement = async (movieId) => {
-  const movies = await getSimilarMovies(movieId);
+export const createSimilarElement = (movies) => {
   const detailPage = document.querySelector(".detail-container");
   const element = document.createElement("div");
   element.classList.add(
