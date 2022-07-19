@@ -15,10 +15,11 @@ export const showMovieList = async () => {
   movieListElement.classList.add(
     "movie-list",
     "row",
-    "row-cols-1",
+    "row-cols-2",
     "row-cols-sm-3",
     "row-cols-lg-5",
-    "g-5"
+    "g-3",
+    "g-lg-5"
   );
 
   const navbarItems = document.querySelectorAll(".nav-item");

@@ -20,7 +20,11 @@ export const getMovies = async (type, page) => {
     ({ id, title, poster_path, vote_average, release_date }) => ({
       id,
       title,
-      poster: getImagePath(poster_path),
+      poster: `${
+        poster_path
+          ? getImagePath(poster_path)
+          : "../assets/default_poster.jpeg"
+      }`,
       rating: vote_average,
       releaseDate: release_date,
     })
