@@ -5,16 +5,21 @@ export const createMovieCard = (movie) => {
   const card = document.createElement("div");
   card.classList.add("col");
   movieListElement.appendChild(card);
+  console.log(movie.poster);
   card.innerHTML = `
   
           <div class="card movie-card ">
             <img
-              src="${movie.poster}"
+              src=${movie.poster}
               class="card-img-top"
               alt="Movie Poster"
             />
             <div class="card-body">
-              <h5 class="card-title text-dark">${movie.title}</h5>
+              <h5 class="card-title text-dark">${
+                movie.title.length > 15
+                  ? movie.title.slice(0, 15) + "..."
+                  : movie.title
+              }</h5>
               <p class="card-text">
                 <small class="text-muted">${movie.releaseDate}</small>
               </p>

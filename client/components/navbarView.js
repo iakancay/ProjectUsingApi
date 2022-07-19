@@ -37,7 +37,7 @@ export const createNavbarElement = () => {
           placeholder="Search"
           aria-label="Search"
         />
-        <button class="btn btn-outline-danger" type="submit">Search</button>
+        <button id="search" class="btn btn-outline-danger" type="submit">Search</button>
       </form>
     </div>
     `;
