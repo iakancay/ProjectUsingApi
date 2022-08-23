@@ -1,5 +1,5 @@
 # ProjectUsingApi
-https://iakancay.github.io/ProjectUsingApi/client/src/index.html
+https://iakancay.github.io/ProjectUsingApi/src/index.html
 ![Welcome page](./src/client/assets/welcome.png)
 ![Top Rated Movies](./src/client/assets/top_rated.png)
 ![Movie Details](./src/client/assets/movie_detail.png)
