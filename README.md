@@ -1,9 +1,9 @@
 # ProjectUsingApi
 https://iakancay.github.io/ProjectUsingApi/client/src/index.html
-![Welcome page](.src/client/assets/welcome.png)
-![Top Rated Movies](./client/assets/top_rated.png)
-![Movie Details](./client/assets/movie_detail.png)
-![Trailer Video](./client/assets/trailer.png)
+![Welcome page](./src/client/assets/welcome.png)
+![Top Rated Movies](./src/client/assets/top_rated.png)
+![Movie Details](./src/client/assets/movie_detail.png)
+![Trailer Video](./src/client/assets/trailer.png)
 
 ```
 📦src
