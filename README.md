@@ -1,8 +1,23 @@
-# ProjectUsingApi
-https://iakancay.github.io/ProjectUsingApi/src/index.html
+# Movie Search Project
+I used [TMDB](https://www.themoviedb.org/) API for this project. You can 
+---List Top Rated, Popular, Now Playing and Upcoming movies.
+---Look movie detail after clicking movie card.
+---Watch movie trailer in movie detail page.
+---Search any movie with search box.
+
+You can try application demo from [here](https://iakancay.github.io/ProjectUsingApi/src/index.html).
+
+
+##WELCOME PAGE
 ![Welcome page](./src/client/assets/welcome.png)
+
+##MOVIE LIST PAGE
 ![Top Rated Movies](./src/client/assets/top_rated.png)
+
+##MOVIE DETAILS PAGE
 ![Movie Details](./src/client/assets/movie_detail.png)
+
+###MOVIE TRAILER MODAL
 ![Trailer Video](./src/client/assets/trailer.png)
 
 ```
