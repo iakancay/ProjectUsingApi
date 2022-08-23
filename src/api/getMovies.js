@@ -1,8 +1,11 @@
-import { API_KEY, BASE_URL } from "../client/src/constants.js";
-import { getImagePath } from "./getMovies.js";
+import { API_KEY, BASE_URL, IMG_URL, YOUTUBE_URL } from "../constants.js";
 
-export const getSearchMovies = async (text) => {
-  const api = `${BASE_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${text}&page=1&include_adult=false`;
+export const getImagePath = (path) => `${IMG_URL}${path}`;
+
+export const getVideoPath = (id) => `${YOUTUBE_URL}${id}`;
+
+export const getMovies = async (type, page) => {
+  const api = `${BASE_URL}movie/${type}?api_key=${API_KEY}&language=en-US&page=${page}`;
   const response = await fetch(api);
   if (!response.ok) {
     throw new Error("Response failed!");
@@ -15,7 +18,7 @@ export const getSearchMovies = async (text) => {
       poster: `${
         poster_path
           ? getImagePath(poster_path)
-          : "../assets/default_poster.jpeg"
+          : "../client/assets/default_poster.jpeg"
       }`,
       rating: vote_average,
       releaseDate: release_date,

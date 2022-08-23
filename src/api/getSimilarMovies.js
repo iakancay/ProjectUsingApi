@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL } from "../client/src/constants.js";
+import { API_KEY, BASE_URL } from "../constants.js";
 import { getImagePath } from "./getMovies.js";
 
 export const getSimilarMovies = async (movieId) => {
@@ -15,7 +15,7 @@ export const getSimilarMovies = async (movieId) => {
       poster: `${
         poster_path !== null
           ? getImagePath(poster_path)
-          : "../assets/default_poster.jpeg"
+          : "../client/assets/default_poster.jpeg"
       }`,
       rating: vote_average,
       releaseDate: release_date,

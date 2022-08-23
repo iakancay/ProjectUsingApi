@@ -1,4 +1,4 @@
-import { showMovieDetail } from "../dashboard/movieDetailsPage.js";
+import { showMovieDetail } from "../pages/movieDetailsPage.js";
 
 export const createMovieCard = (movie) => {
   const movieListElement = document.querySelector(".movie-list");

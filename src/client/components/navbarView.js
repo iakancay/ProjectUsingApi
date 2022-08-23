@@ -4,7 +4,7 @@ export const createNavbarElement = () => {
   element.innerHTML = `
     <a class="navbar-brand" href="#">
       <img
-        src="../assets/logo.png"
+        src="./client/assets/logo.png"
         alt="Logo"
         width="50"
         height="50"

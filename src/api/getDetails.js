@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL } from "../client/src/constants.js";
+import { API_KEY, BASE_URL } from "../constants.js";
 import { getImagePath, getVideoPath } from "./getMovies.js";
 
 export const getMovieDetail = async (movieId) => {
