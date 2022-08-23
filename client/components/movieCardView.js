@@ -5,7 +5,6 @@ export const createMovieCard = (movie) => {
   const card = document.createElement("div");
   card.classList.add("col");
   movieListElement.appendChild(card);
-  console.log(movie.poster);
   card.innerHTML = `
   
           <div class="card movie-card ">
